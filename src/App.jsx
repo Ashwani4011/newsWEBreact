@@ -9,6 +9,7 @@ function App() {
   const loadNews = async (query) => { 
     const data = await fetchNews(query); 
     setArticles(data); 
+    
   }; 
     useEffect(() => { loadNews("India"); }, []);
   
