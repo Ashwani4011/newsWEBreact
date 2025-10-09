@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"; 
-import { fetchNews } from "./Components/Fetchnews"; 
+import { fetchNews } from "./Fetchnews"; 
 import './App.css';
 import Card from "./Components/Card"
 import Navbar from './Components/Navbar';
