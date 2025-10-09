@@ -1,6 +1,6 @@
 export default async function handler(req, res) {
   const query = req.query.q || "India";
-  const API_KEY = process.env.NEWS_API_KEY; // must be in Vercel env vars
+  const API_KEY = process.env.VITE_NEWS_API_KEY; // must be in Vercel env vars
 
   try {
     const response = await fetch(

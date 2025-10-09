@@ -75,14 +75,14 @@
 
 
 
-const BASE_URL = import.meta.env.NEWS_API_KEY
+const BASE_URL = import.meta.env.VITE_NEWS_API_KEY
   ? `/api/news?q=`
   : "https://newsapi.org/v2/everything?q=";
 
 export async function fetchNews(query = "India") {
   let res;
 
-  if (import.meta.env.NEWS_API_KEY) {
+  if (import.meta.env.VITE_NEWS_API_KEY) {
     // Production: call serverless API
     res = await fetch(`/api/news?q=${query}`);
   } else {
