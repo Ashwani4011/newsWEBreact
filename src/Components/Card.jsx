@@ -1,4 +1,3 @@
-import React from "react";
 
 function Card({ article }) {
   const { title, description, urlToImage, url, source, publishedAt } = article;

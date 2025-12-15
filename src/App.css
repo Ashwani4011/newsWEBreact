@@ -7,3 +7,26 @@ body {
   background-color: #f9fbfd;
   color: #183b56;
 }
+.nav ul li {
+  transition: font-size 0.2s ease, padding 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .nav ul li {
+    font-size: 14px;
+  }
+  .searchBar{
+    max-width:200px;
+  }
+
+.searchButton{
+    max-width:100px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .nav ul li {
+    font-size: 13px;
+  }
+}

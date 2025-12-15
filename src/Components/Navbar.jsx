@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import '../App.css'
 import { TbReload } from "react-icons/tb";
 
 function Navbar({ onCategorySelect, onSearch }) {
@@ -10,17 +11,15 @@ function Navbar({ onCategorySelect, onSearch }) {
   };
 
   return (
-    <nav className="bg-[#f3faff] fixed top-0 left-0 right-0 z-50 shadow-md">
-      <div className="max-w-[1180px] mx-auto flex justify-between items-center p-3">
+    <nav className="nav bg-[#f3faff] fixed top-0 left-0 right-0 z-50 shadow-md">
+      <div className="max-w-[1180px] mx-auto flex flex-wrap justify-between items-center p-3 gap-2">
         <a
           href="#"
           onClick={() => window.location.reload()}
-          className="flex items-center"
-        >
-          <div className="w-28"><TbReload  size={40}/></div>
+          className="flex items-center flex-shrink-0">
+            <TbReload  size={40}/>
         </a>
-
-        <ul className="flex gap-6 text-[#183b56] font-medium">
+        <ul className="flex flex-wrap justify-center gap-4 flex-grow text-[#183b56] font-medium">
           {categories.map((cat) => (
             <li
               key={cat}
@@ -32,17 +31,17 @@ function Navbar({ onCategorySelect, onSearch }) {
           ))}
         </ul>
 
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2 flex-shrink-0 w-full sm:w-auto justify-center">
           <input
             type="text"
             placeholder="e.g. Science"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-[200px] border-2 border-[#bbd0e2] rounded px-3 py-1 text-sm"
+            className="searchBar w-full sm:w-[200px] border-2 border-[#bbd0e2] rounded px-3 py-1 text-sm"
           />
           <button
             onClick={handleSearch}
-            className="bg-[#2294ed] text-white px-4 py-1 rounded hover:bg-[#1d69a3]"
+            className="searchButton w-full sm:w-auto bg-[#2294ed] text-white px-4 py-1 rounded hover:bg-[#1d69a3]"
           >
             Search
           </button>

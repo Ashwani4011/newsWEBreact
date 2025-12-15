@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"; 
+import { useEffect, useState } from "react"; 
 import { fetchNews } from "./Fetchnews"; 
 import './App.css';
 import Card from "./Components/Card"
