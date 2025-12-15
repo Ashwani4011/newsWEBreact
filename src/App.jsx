@@ -18,7 +18,7 @@ function App() {
     <>
       <div className="min-h-screen bg-[#f9fbfd]">
          <Navbar onCategorySelect={loadNews} onSearch={loadNews} /> 
-         <main className="max-w-[1180px] mx-auto p-4 flex flex-wrap justify-between gap-y-6" style={{marginTop:"60px"}}> 
+         <main className=" main-container max-w-[1180px] mx-auto p-4 flex flex-wrap justify-between gap-y-6" > 
           {articles.map((article, idx) => ( <Card key={idx} article={article} /> ))} 
           </main> 
           </div>
